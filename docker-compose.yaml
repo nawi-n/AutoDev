@@ -1,10 +1,12 @@
+version: '3.8'
+
 services:
-  app-prod:
-    image: bolt-ai:production
+  AutoDev-ai:
+    image: AutoDev-ai:latest
     build:
       context: .
       dockerfile: Dockerfile
-      target: bolt-ai-production
+      target: AutoDev-ai-production
     ports:
       - '5173:5173'
     env_file: '.env.local'
@@ -29,14 +31,15 @@ services:
       - RUNNING_IN_DOCKER=true
     extra_hosts:
       - 'host.docker.internal:host-gateway'
-    command: pnpm run dockerstart
+    command: npm run start
     profiles:
       - production
+    container_name: AutoDev-ai
 
   app-dev:
-    image: bolt-ai:development
+    image: AutoDev-ai:development
     build:
-      target: bolt-ai-development
+      target: AutoDev-ai-development
     env_file: '.env.local'
     environment:
       - NODE_ENV=development
