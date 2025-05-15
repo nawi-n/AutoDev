@@ -11,13 +11,14 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #f8fafc; /* Light background for light theme */
 }
 
 :root {
   --gradient-opacity: 0.8;
-  --primary-color: rgba(158, 117, 240, var(--gradient-opacity));
-  --secondary-color: rgba(138, 43, 226, var(--gradient-opacity));
-  --accent-color: rgba(128, 59, 239, var(--gradient-opacity));
+  --primary-color: rgba(20, 184, 166, var(--gradient-opacity)); /* Teal */
+  --secondary-color: rgba(14, 165, 233, var(--gradient-opacity)); /* Sky blue */
+  --accent-color: rgba(99, 102, 241, var(--gradient-opacity)); /* Indigo */
   // --primary-color: rgba(147, 112, 219, var(--gradient-opacity));
   // --secondary-color: rgba(138, 43, 226, var(--gradient-opacity));
   // --accent-color: rgba(180, 170, 220, var(--gradient-opacity));
